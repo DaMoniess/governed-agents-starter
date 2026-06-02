@@ -1,0 +1,15 @@
+# invariants.example.yaml
+# The flat list of things your agent must NEVER do. Keep it short (5-15 lines)
+# and plain-language. This is what the observer checks every action against.
+# If a rule needs nuance, it's a guideline (put it in the doer's prompt), not an invariant.
+
+invariants:
+  - never_promise_a_refund_discount_or_credit_before_it_is_confirmed
+  - never_claim_an_action_happened_without_a_confirming_tool_call
+  - never_contradict_the_system_of_record   # e.g. the order/billing database
+  - never_change_account_settings_without_an_explicit_confirmed_request
+  - never_send_more_than_2_messages_without_human_input
+  - never_send_pii_to_a_third_party
+
+# Tip: every way your agent could seriously hurt you should appear here.
+# Enforce each at the strongest layer possible: code > observer > prompt.

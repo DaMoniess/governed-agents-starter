@@ -1,0 +1,14 @@
+{
+  "_comment": "Wrap EVERY agent action in this before it executes. You can't check intent-vs-output if intent was never written down. The observer reads this envelope, plus the source-of-truth state, and returns a verdict.",
+
+  "intent": "Send the customer a draft reply asking for their order number",
+  "action": "send_message",
+  "args": {
+    "to": "customer",
+    "body": "Happy to help — could you share your order number so I can look it up?"
+  },
+  "invariants_touched": [
+    "never_promise_a_refund_discount_or_credit_before_it_is_confirmed",
+    "never_change_account_settings_without_an_explicit_confirmed_request"
+  ]
+}

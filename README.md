@@ -47,6 +47,8 @@ The Observer is one of five disciplines. The full **Governed Agents** pack adds:
 - **The Source-of-Truth Doctrine** — stop your agent "remembering" things that never happened.
 - **Anti-Overfitting Validation** — know your agent generalizes instead of memorizing your test cases.
 - **A full worked example** — all four wired into one governed support-triage agent, end to end.
+- **A case study ("The Save")** — a real-world-style incident where the observer caught a confident, wrong action before it reached a customer.
+- **An implementation kit** — a runnable `observer.py` plus fill-in templates for the contract, escalation policy, source-of-truth reconciliation, validation plan, launch checklist, and audit report.
 
 → **[Get the pack ($79)](https://damonies.gumroad.com/l/qorsu)** · lifetime updates · 30-day refund
 
